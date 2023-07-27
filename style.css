@@ -246,3 +246,8 @@ header {
 		display: none;
 	}
 }
+@media (max-width:480px){
+	.logo-main img{
+		padding-top: 7px;
+	}
+}
