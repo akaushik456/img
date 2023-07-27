@@ -242,4 +242,7 @@ header {
 	.styled-menu .first-menu ul{
 		margin-top: 100px;
 	}
+	.right-con li .search {
+		display: none;
+	}
 }
