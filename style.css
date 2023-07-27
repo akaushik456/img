@@ -1,0 +1,245 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	align-items: center;
+}
+.logo-main {
+	width: 350px;
+	position: relative;
+	z-index: 10;
+	padding: 0px 10px;
+}
+.logo-main img {
+	width: 100%;
+}
+.header-containter {
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	position: relative;
+
+	margin: 0 auto;
+}
+.header-containter nav {
+	display: flex;
+	flex-direction: row;
+	margin-left: 20px;
+}
+.header-containter nav ul.main-menu {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	align-items: center;
+}
+.header-containter nav ul.main-menu li {
+	display: flex;
+	position: relative;
+}
+.header-containter nav ul li a {
+	padding: 15px;
+	color: #000000;
+	font-size: 23px;
+	text-decoration: none;
+}
+.header-containter nav ul .dropdown-menu {
+	display: none;
+}
+.right-con {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin-left: auto;
+}
+.right-con li {
+	display: flex;
+}
+
+.right-con li img {
+	width: 100%;
+}
+.right-con li .search {
+	width: 50px;
+	padding: 0 10px;
+}
+.right-con li .menu {
+	width: 50px;
+	padding: 0 5px;
+}
+.main-menu li:hover .dropdown-menu {
+	display: block;
+}
+.main-menu li .dropdown-menu {
+	display: block;
+	position: absolute;
+	padding: 0;
+	margin: 2px 0px 0px 0px;
+	min-width: 250px;
+	top: 100%;
+	background: #ffffff;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.main-menu li .dropdown-menu li {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.main-menu li .dropdown-menu li a {
+	padding: 15px 20px 10px 20px;
+	width: 100%;
+	font-size: 18px;
+}
+.main-menu li .dropdown-menu li a:hover {
+	background: #ff3333;
+	color: #ffffff;
+}
+.styled-menu {
+	position: absolute;
+	height: 100vh;
+	left: 50%;
+	top: 0;
+	background: #ffffff;
+	width: 105%;
+	display: flex;
+	flex-direction: row;
+	transform: translate(-50%, 0);
+	display: none;
+}
+.styled-menu.visible-menu {
+	display: flex;
+}
+
+.styled-menu .first-menu {
+	width: 40%;
+	background: #333333;
+	height: 100%;
+	display: flex;
+	justify-content: end;
+}
+.styled-menu .first-menu ul {
+	padding: 0;
+	margin-top: 150px;
+	list-style: none;
+}
+.styled-menu .first-menu ul li {
+	padding: 0px;
+	margin: 0;
+	display: flex;
+}
+
+.styled-menu .first-menu ul li a {
+	text-decoration: none;
+	font-size: 34px;
+	color: #ffffff;
+	padding: 15px 35px;
+	display: flex;
+	width: 100%;
+}
+
+.styled-menu .first-menu ul li a.active-menu {
+	background: #ffffff;
+	color: #000000;
+}
+.styled-menu .first-menu ul li a:hover {
+	background: #ffffff;
+	color: #000000;
+}
+.styled-menu .second-menu {
+	width: 35%;
+}
+.styled-menu .third-menu {
+	width: 25%;
+}
+.second-menu .dropdown-menu {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: none;
+}
+.second-menu .dropdown-menu li a {
+	text-decoration: none;
+	font-size: 35px;
+	color: #000000;
+	padding: 15px 35px;
+	display: flex;
+	width: 100%;
+}
+.second-menu .dropdown-menu li a:hover {
+	color: #ff3333;
+}
+.second-menu .dropdown-menu.menu-visible {
+	display: block;
+}
+.third-menu {
+	background-color: #f2f2f2;
+	padding: 20px 50px;
+}
+.third-menu .side-pannel-list h1 {
+	color: #000000;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 30px;
+}
+.third-menu .side-pannel-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.third-menu .side-pannel-list li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	padding: 5px;
+}
+.close-icon {
+	position: absolute;
+	z-index: 2;
+	right: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #000000;
+	cursor: pointer;
+	right: 40px;
+	top: 20px;
+}
+
+@media (max-width:1074px) {
+	header{
+		width: 100%;
+	}
+	.header-containter nav{
+		display: none;
+	}
+    .logo-main{
+		width: 300px;
+	}
+    .third-menu{
+		padding: 20px 5px;
+	}
+	.second-menu .dropdown-menu li a {
+		padding: 15px 6px;
+	}
+}
+@media (max-width:680px) {
+	.styled-menu{
+		flex-direction: column;
+	}
+	.styled-menu .responsive{
+		width: 100%;
+		justify-content: start;
+	}
+	.styled-menu .first-menu ul{
+		margin-top: 100px;
+	}
+}
